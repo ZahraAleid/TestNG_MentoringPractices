@@ -1,8 +1,7 @@
-package com.sda.mentoring.assignments;
+package com.sda.mentoring.assignments.day1;
 
 import com.sda.mentoring.utilities.TestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;

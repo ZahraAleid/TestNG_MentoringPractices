@@ -1,4 +1,4 @@
-package com.sda.mentoring.assignments;
+package com.sda.mentoring.assignments.day1;
 
 import com.sda.mentoring.utilities.TestBase;
 import org.openqa.selenium.Alert;
@@ -6,8 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
-import java.util.SortedMap;
 
 public class T05_SoftAssertLoginTest extends TestBase {
 
