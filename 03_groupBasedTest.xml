@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <test name="SmokeTests">
+        <groups>
+            <run>
+                <include name="smoke"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.sda.mentoring.assignments.day2.T02_GroupBasedTest"> </class>
+        </classes>
+    </test>
+    
+    <test name="RegressionTest">
+        <groups>
+            <run>
+                <include name="regression"> </include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.sda.mentoring.assignments.day2.T02_GroupBasedTest"> </class>
+        </classes>
+    </test>
+
+    <test name="ApiTest">
+        <groups>
+            <run>
+                <include name="api"> </include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.sda.mentoring.assignments.day2.T02_GroupBasedTest"> </class>
+        </classes>
+    </test>
+
+    <test name="ExcludeApiTests">
+        <groups>
+            <run>
+                <exclude name="api"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.sda.mentoring.assignments.day2.T02_GroupBasedTest"> </class>
+        </classes>
+    </test>
+
+    <test name="SmokeAndRegression">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.sda.mentoring.assignments.day2.T02_GroupBasedTest"> </class>
+        </classes>
+    </test>
+
+
+</suite>
