@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AmazonSearchSuite">
+
+    <test name="JavaSearch">
+        <parameter name="searchKeyword" value="java"> </parameter>
+        <classes>
+            <class name="com.sda.mentoring.assignments.day2.T01_AmazonSearchTest"> </class>
+        </classes>
+    </test>
+
+    <test name="SeleniumSearch">
+        <parameter name="searchKeyword" value="selenium"> </parameter>
+        <classes>
+            <class name="com.sda.mentoring.assignments.day2.T01_AmazonSearchTest"> </class>
+        </classes>
+    </test>
+
+</suite>

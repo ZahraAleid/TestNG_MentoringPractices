@@ -17,7 +17,7 @@ public class T01_AmazonSearchTest extends TestBase {
 
     @Test
     @Parameters("searchKeyword")
-    public void amazonSearchTest(String keyword) {
+    public void amazonSearchSuite(String keyword) {
         driver.get("https://www.amazon.com");
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys(keyword);
         driver.findElement(By.id("nav-search-submit-button")).click();
