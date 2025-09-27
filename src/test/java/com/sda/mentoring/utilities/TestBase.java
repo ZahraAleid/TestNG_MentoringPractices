@@ -3,8 +3,9 @@ package com.sda.mentoring.utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 
@@ -14,8 +15,21 @@ public abstract class TestBase {
     protected WebDriver driver;
 
     @BeforeMethod
-    public void setUp() {
-        driver = new ChromeDriver();
+    @Parameters("browser")
+    public void setUp(@Optional("chrome") String browser) {
+
+            switch (browser.toLowerCase()){
+                case "firefox":
+                    driver = new FirefoxDriver();
+                    break;
+                case "edge":
+                    driver = new EdgeDriver();
+                    break;
+                default:
+                    driver = new ChromeDriver();
+            }
+
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
@@ -26,5 +40,9 @@ public abstract class TestBase {
         driver.quit();
     }
 
+//    @DataProvider
+//    public void Browser(){
+//
+//    }
 
 }
